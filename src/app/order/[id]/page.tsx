@@ -21,7 +21,7 @@ export default function OrderPage() {
     }, [])
 
     if (!order) {
-        return <div className={'mt-20'}>Заявка не найдена</div>;
+        return <div className={'mt-20'}>Загрузка</div>;
     }
     return (
         <div className={'pl-5 pr-5'}>
