@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model ExchangeOrder {
+  id           String   @id @default(cuid())
+  userId       String
+  email        String
+  wallet       String
+  baseAmount   Float
+  targetAmount Float
+  baseCoin     String
+  targetCoin   String
+  status       Status   @default(AWAITING_PAYMENT)
+  createdAt    DateTime @default(now())
+}
+
+enum Status {
+  AWAITING_PAYMENT
+  AWAITING_FUNDS
+  AWAITING_CONFIRMATION
+  EXCHANGING
+  COMPLETED
+}
