@@ -23,7 +23,7 @@ const CoinsClient = function () {
     ];
     return (
         <div className={'w-full flex flex-col gap-10'}>
-            <div className='grid max-w-6xl m-auto grid-cols-[4fr_6fr] pl-4 pr-4 w-full gap-4'>
+            <div className='grid max-w-6xl m-auto grid-cols-[4fr_6fr] w-full gap-4'>
                 <BaseCoinsTable/>
                 <TargetCoinsTable/>
             </div>

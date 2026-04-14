@@ -24,12 +24,10 @@ export default function OrderPage() {
         return <div className={'mt-20'}>Загрузка</div>;
     }
     return (
-        <div className={'pl-5 pr-5'}>
-            <div className={'mt-10 mb-10 bg-white m-auto rounded-md xl:min-w-6xl p-5 shadow-sm'}>
+            <div className={'mt-10 mb-10 bg-white m-auto rounded-md w-full p-5 shadow-sm'}>
                 {order.status === 'AWAITING_PAYMENT' ?
                     <AwaitingPayment order={order}/>
                     : <AwaitingFunds order={order}/>}
             </div>
-        </div>
     );
 }

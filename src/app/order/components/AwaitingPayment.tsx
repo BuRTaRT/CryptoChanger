@@ -6,7 +6,7 @@ import OrderTransactionInfo from "@/app/order/components/OrderTransactionInfo";
 const AwaitingPayment = function ({order}: any) {
     return (
         <>
-            <div className={'flex flex-col sm:flex-row justify-between items-center '}>
+            <div className={'flex flex-col sm:flex-row justify-between items-center'}>
                 <h2 className={'text-xl'}>Ожидается оплата</h2>
                 <div>Id заявки: {order.id}</div>
             </div>

@@ -16,9 +16,9 @@ const MyOrders = function () {
 
     useEffect(() => {
         const userId = localStorage.getItem('exchangeUserId');
-        fetchOrders(`/api/my-orders?userId=${userId}`, setOrders, setIsLoading)
+        fetchOrders(`/api/my-orders/${userId}`, setOrders, setIsLoading)
         const interval = setInterval(() => {
-            fetchOrders(`/api/my-orders?userId=${userId}`, setOrders, setIsLoading)
+            fetchOrders(`/api/my-orders/${userId}`, setOrders, setIsLoading)
         }, 5000);
         return () => {
             clearInterval(interval)

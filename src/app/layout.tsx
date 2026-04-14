@@ -45,7 +45,7 @@ export default async function RootLayout({
             className="flex m-auto max-w-full flex-col min-h-screen items-center bg-zinc-50 font-sans dark:bg-black">
             <Header/>
             <main
-                className="flex flex-1 flex-col dark:bg-black m-auto">
+                className="flex flex-1 xl:w-6xl flex-col pl-5 pr-5 dark:bg-black m-auto">
                 <CoinsProvider coins={coins}>{children}</CoinsProvider>
             </main>
             <Footer/>

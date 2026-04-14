@@ -24,24 +24,26 @@ const About = function () {
         }
     ];
     return (
-        <div className={'max-w-6xl text-left text-2xl mt-5  font-bold text-[#3e3737] mt-10 mb-10'}>
+        <div className={'mt-10'}>
             <PageHeader>О нас / Контакты</PageHeader>
-            <div className={'bg-white'}>
-                {sections.map(section => {
-                    return <div key={section.title} className={'p-5'}>
-                        <h2 className={'text-l font-bold '}>{section.title}</h2>
-                        <p className={'text-base font-normal'}>{section.content}</p>
-                    </div>
-                })}
-                <iframe
-                    src="https://maps.google.com/maps?q=Paris, France&z=12&output=embed"
-                    width="100%"
-                    height="400"
-                    style={{border: 0}}
-                    allowFullScreen
-                    loading="lazy"
-                    title="Map"
-                />
+            <div className={'text-left text-2xl mt-5 font-bold text-[#3e3737] p-5 bg-white'}>
+                <div>
+                    {sections.map(section => {
+                        return <div key={section.title}>
+                            <h2 className={'text-l font-bold '}>{section.title}</h2>
+                            <p className={'text-base font-normal'}>{section.content}</p>
+                        </div>
+                    })}
+                    <iframe
+                        src="https://maps.google.com/maps?q=Paris, France&z=12&output=embed"
+                        width="100%"
+                        height="400"
+                        style={{border: 0}}
+                        allowFullScreen
+                        loading="lazy"
+                        title="Map"
+                    />
+                </div>
             </div>
         </div>
     );
